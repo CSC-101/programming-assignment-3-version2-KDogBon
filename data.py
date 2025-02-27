@@ -35,5 +35,15 @@ class CountyDemographics:
                 self.ethnicities,
                 self.income,
                 self.population,
-                self.state
-            )
+                self.state)
+
+    def __eq__(self, other):
+        if isinstance(other, CountyDemographics):
+            return (self.age == other.age and
+                        self.county == other.county and
+                        self.education == other.education and
+                        self.income == other.income and
+                        self.ethnicities == other.ethnicities and
+                        self.population == other.population and
+                        self.state == other.state)
+
